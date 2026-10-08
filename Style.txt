@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1b4d3e, #0e2a21);
+    color: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-size: 16px; /* Base para el zoom */
+}
+
+/* Destellos de tréboles flotantes de fondo */
+.clover-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#2ecc71 1.5px, transparent 1.5px), radial-gradient(#a3e4d7 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(20, 60, 45, 0.9);
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom: 3px solid #2ecc71;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+    color: #a3e4d7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.accessibility-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.ctrl-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.ctrl-btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+}
+
+#loading {
+    display: block;
+    margin-top: 15px;
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Contenedor principal con flechas de navegación */
+.main-reader-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.nav-btn {
+    background-color: rgba(39, 174, 96, 0.8);
+    color: white;
+    border: 2px solid #a3e4d7;
+    font-size: 2rem;
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-book {
+    display: none; /* Oculto hasta que se cargue el PDF */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.page {
+    background-color: #fff;
+    border: solid 1px #bdc3c7;
+    overflow: hidden;
+}
+
+.page canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.stf__wrapper {
+    background-color: transparent !important;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magia de Cuentos - Lector Infantil</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería PDF.js para leer el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para el efecto de pasar página -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <!-- Fondo decorativo con tréboles animados -->
+    <div class="clover-background" id="clover-bg"></div>
+
+    <div class="header">
+        <h1>📖 El Rincón Mágico de los Cuentos</h1>
+        <p>Disfruta de una maravillosa aventura</p>
+        
+        <!-- Panel de Accesibilidad y Controles -->
+        <div class="accessibility-controls">
+            <button id="speech-btn" class="ctrl-btn" title="Leer cuento en voz alta">🔊 Leer Cuento</button>
+            <button id="zoom-in-btn" class="ctrl-btn" title="Aumentar tamaño">A+</button>
+            <button id="zoom-out-btn" class="ctrl-btn" title="Reducir tamaño">A-</button>
+        </div>
+
+        <div id="loading">Cargando la magia del cuento, por favor espera...</div>
+    </div>
+
+    <!-- Contenedor principal del libro con botones de navegación integrados -->
+    <div class="main-reader-container">
+        <button id="prev-btn" class="nav-btn" title="Página anterior">◀</button>
+        
+        <div class="book-container">
+            <div id="flip-book" class="flip-book"></div>
+        </div>
+        
+        <button id="next-btn" class="nav-btn" title="Página siguiente">▶</button>
+    </div>
+
+    <!-- Elemento de audio para el efecto de pasar página -->
+    <audio id="page-sound" src="https://actions.google.com/sounds/v1/foley/paper_page_turn.ogg" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
